@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Green vs Red</name>
+    </assembly>
+    <members>
+        <member name="T:Green_vs_Red.CellManipulation">
+            <summary>
+                CellManipulation: A class that contains four methods, for obtaining the neighbouring values of a certain cell, checking their colour (red or green), 
+                changing their color and counting the times a certain cell has changed its colour.
+            </summary>
+        </member>
+        <member name="M:Green_vs_Red.CellManipulation.GetSurroundingCells(System.Int32[0:,0:],System.Int32,System.Int32,System.Int32@,System.Int32@,System.Int32@,System.Int32@,System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+                GetSurroundingCells: Is a void method that obtains the values of all the surrounding cells from a certain coordinate in the matrix.
+                It takes eleven integer parameters.
+            </summary>
+            <param name="matrix">Two-dimensional array.</param>
+            <param name="row">Current row.</param>
+            <param name="col">Current column.</param>
+            <param name="upperLeft">Upper left cell.</param>
+            <param name="upperCenter">Upper center cell.</param>
+            <param name="upperRight">Upper right cell.</param>
+            <param name="centerRight">Right center cell.</param>
+            <param name="lowerRight">Lower right cell.</param>
+            <param name="lowerCenter">Lower center cell.</param>
+            <param name="lowerLeft">Lower left cell.</param>
+            <param name="centerLeft">Left center cell.</param>
+        </member>
+        <member name="M:Green_vs_Red.CellManipulation.CheckCellColourCount(System.Byte,System.Byte,System.Int32@,System.Int32@,System.Int32[])">
+            <summary>
+                CheckCellColourCount: Is a void method that calculates how many red and green cells are there surrounding a certain coordinate in the matrix.
+                It takes five parameters.
+            </summary>
+            <param name="greenCell">Constant indicating the value for green cells.</param>
+            <param name="redCell">Constant indicating the value for red cells.</param>
+            <param name="redCellCount">The amount of red cells.</param>
+            <param name="greenCellCount">The amount of green cells.</param>
+            <param name="listOfSurroundingCells">Array of all the surrounding cell's values.</param>
+        </member>
+        <member name="M:Green_vs_Red.CellManipulation.ChangeCellColour(System.Byte,System.Byte,System.Int32,System.Int32)">
+            <summary>
+                ChangeCellColour: Is a method that changes the state/colour of a certain cell.
+                It takes four parameters.
+            </summary>
+            <param name="greenCell">Constant indicating the value for green cells.</param>
+            <param name="redCell">Constant indicating the value for red cells.</param>
+            <param name="greenCellCount">The amount of green cells.</param>
+            <param name="currentCellValue">The value of the cell we are currently looking at.</param>
+            <returns>The new value of the cell.</returns>
+        </member>
+        <member name="M:Green_vs_Red.CellManipulation.CountingCellStateChange(System.Int32,System.Int32,System.Byte,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                CountingCellStateChange: Is a method that counts how many times a certain cell has changed its colour/state.
+                It takes seven parameters.
+            </summary>
+            <param name="y">Height of the matrix.</param>
+            <param name="x">Width of the matrix.</param>
+            <param name="greenCell">Constant indicating the value for green cells.</param>
+            <param name="cellStateChangeCount">How many times has the cell we want changed to green.</param>
+            <param name="row">Current row.</param>
+            <param name="col">Current column.</param>
+            <param name="currentCellValue">The value of the cell we are currently looking at.</param>
+            <returns>The amount of state changes.</returns>
+        </member>
+        <member name="T:Green_vs_Red.ConvertValues">
+            <summary>
+                ConvertValues: A class with two methods that are converting input from the console to an integer data type.
+            </summary>
+        </member>
+        <member name="M:Green_vs_Red.ConvertValues.ParseValues">
+            <summary>
+                ParseValues: Is a method which takes no parameters, parses and converts input from the console to integer data type.
+            </summary>
+            <returns>Input as integer</returns>
+        </member>
+        <member name="M:Green_vs_Red.ConvertValues.ConvertRowToInt(System.String)">
+            <summary>
+                ConvertRowToInt: Is a method which takes one string parameter and converts it to an array of integers.
+            </summary>
+            <param name="tempCurrentRow">Just a mediator for the conversion process.</param>
+            <returns>An array of integers</returns>
+        </member>
+        <member name="T:Green_vs_Red.GenerationsEngine">
+            <summary>
+                GenerationsEngine Class: Is a class that creates the next generations of cells.
+                It also inherits the CellManipulation class.
+            </summary>
+        </member>
+        <member name="M:Green_vs_Red.GenerationsEngine.CreateGenerations(System.Int32[0:,0:],System.Int32,System.Int32,System.Int32,System.Byte,System.Byte,System.Int32)">
+            <summary>
+                CreateGenerations: Is a method comprised of several additional methods and it creates a new generation of cells.
+            </summary>
+            <param name="matrix">Two-dimensional array.</param>
+            <param name="y">Height of the matrix.</param>
+            <param name="x">Width of the matrix.</param>
+            <param name="generations">How many generations do we want to check.</param>
+            <param name="greenCell">Constant indicating the value for green cells.</param>
+            <param name="redCell">Constant indicating the value for red cells.</param>
+            <param name="cellStateChangeCount">How many times has the cell we want changed to green.</param>
+            <returns>How many times has a certain cell changed its state throughout the generations.</returns>
+        </member>
+        <member name="M:Green_vs_Red.GenerationsEngine.SpawnNextGeneration(System.Int32[0:,0:],System.Collections.Generic.List{System.Int32})">
+            <summary>
+                SpawnNextGeneration: Is a method that overrides the current generation with the next one.
+                It takes two integer parameters.
+            </summary>
+            <param name="matrix">Two-dimensional array.</param>
+            <param name="newGenerationCellsList">A list with the cell values for the new generation.</param>
+        </member>
+        <member name="T:Green_vs_Red.Matrix">
+            <summary>
+                Matrix: Is a class with one method that fills a two-dimensional array with data.
+            </summary>
+        </member>
+        <member name="M:Green_vs_Red.Matrix.CreateMatrix(System.Int32,System.Int32,System.Int32[0:,0:])">
+            <summary>
+                CreateMatrix: Is a void method for packing a two dimentional integer array with 0's and 1's which were obtained from the user input in the console.
+                It takes three integer parameters.
+            </summary>
+            <param name="rows">The amount of rows for the array.</param>
+            <param name="cols">The amount of columns for the array.</param>
+            <param name="matrix">Two-dimensional array.</param>
+        </member>
+    </members>
+</doc>

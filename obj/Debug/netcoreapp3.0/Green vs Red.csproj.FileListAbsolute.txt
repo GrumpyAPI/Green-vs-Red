@@ -1,0 +1,12 @@
+C:\Users\yulia\source\repos\Green vs Red\Green vs Red\bin\Debug\netcoreapp3.0\Green vs Red.exe
+C:\Users\yulia\source\repos\Green vs Red\Green vs Red\bin\Debug\netcoreapp3.0\Green vs Red.deps.json
+C:\Users\yulia\source\repos\Green vs Red\Green vs Red\bin\Debug\netcoreapp3.0\Green vs Red.runtimeconfig.json
+C:\Users\yulia\source\repos\Green vs Red\Green vs Red\bin\Debug\netcoreapp3.0\Green vs Red.runtimeconfig.dev.json
+C:\Users\yulia\source\repos\Green vs Red\Green vs Red\bin\Debug\netcoreapp3.0\Green vs Red.dll
+C:\Users\yulia\source\repos\Green vs Red\Green vs Red\bin\Debug\netcoreapp3.0\Green vs Red.pdb
+C:\Users\yulia\source\repos\Green vs Red\Green vs Red\obj\Debug\netcoreapp3.0\Green vs Red.csprojAssemblyReference.cache
+C:\Users\yulia\source\repos\Green vs Red\Green vs Red\obj\Debug\netcoreapp3.0\Green vs Red.AssemblyInfoInputs.cache
+C:\Users\yulia\source\repos\Green vs Red\Green vs Red\obj\Debug\netcoreapp3.0\Green vs Red.AssemblyInfo.cs
+C:\Users\yulia\source\repos\Green vs Red\Green vs Red\obj\Debug\netcoreapp3.0\Green vs Red.dll
+C:\Users\yulia\source\repos\Green vs Red\Green vs Red\obj\Debug\netcoreapp3.0\Green vs Red.pdb
+C:\Users\yulia\source\repos\Green vs Red\Green vs Red\bin\Debug\netcoreapp3.0\Green vs Red.xml
